@@ -14,5 +14,7 @@ $accessToken = 'ya29._______________';
 $imap = imap2_open($mailbox, $username, $accessToken, OP_XOAUTH2);
 
 $countMessages = imap2_num_msg($imap);
+$lastMessage = imap2_body($imap, $countMessages);
 
 echo "This mailbox contains: $countMessages emails.\n";
+#echo "Last message is:\n $lastMessage";
