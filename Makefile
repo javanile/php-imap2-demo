@@ -15,3 +15,9 @@ imap1-demo1:
 
 imap2-demo1:
 	@docker-compose run --rm imap2 php -f demo/demo1.php
+
+imap1-demo2:
+	@docker-compose run --rm imap1 php -f demo/demo2.php
+
+imap2-demo2:
+	@docker-compose run --rm imap2 php -f demo/demo2.php
