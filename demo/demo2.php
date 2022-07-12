@@ -1,6 +1,19 @@
 <?php
 
-imap_open
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+$mailbox = '{imap.gmail.com:993/imap/ssl}';
+$username = '_______________@gmail.com';
+$accessToken = 'ya29._______________';
+
+@include 'variables.php';
+
+$imap = imap2_open($mailbox, $username, $accessToken, OP_XOAUTH2);
+
+/*
 imap_timeout
 
 imap_utf7_decode
@@ -25,3 +38,4 @@ imap_num_msg
 
 imap_expunge
 imap_close
+*/
